@@ -6,9 +6,13 @@ var app = express();
 app.use(bodyParser.json());
 
 
+app.get('/items', function(req, res){
+	res.status(200).send(items);
+})
 
-
-
+app.post('/items', function(req, res){
+	res.status(200).send();
+})
 
 app.listen(port, function() {
 	console.log('Listening on port',port);
